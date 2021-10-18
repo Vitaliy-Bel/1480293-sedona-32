@@ -1,0 +1,260 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+  background-color: #FFFFFF;
+  ;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 700;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #756257;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.page-header {
+  color: #000000;
+  background: #FFFFFF;
+}
+
+.page {
+  font-family: "PT Sans", sans-serif;
+  line-height: 20px;
+  line-height: 21px;
+  font-weight: 700;
+  text-align: center;
+  color: #000000;  /*  Не понимаю зачем это, если в page-header есть это */
+  background-color: #FFFFFF;
+  text-decoration: none;
+}
+
+.index-logo {
+  color: #000000;
+  background-color: #FFFFFF;
+  text-align: center;
+}
+
+.logo-title {
+  font-family: "PT Sans", sans-serif;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  font-weight: 700;  /*  Почему не работает? Потому что апперкейс есть? */
+}
+
+.logo-description {
+  font-family: "PT Sans", sans-serif;
+  font-size: 22px;
+  line-height: 36px;
+}
+
+
+.advantages {
+  color: #000000;
+  background-color: #FFFFFF;
+  text-align: center;
+
+
+}
+
+.advantages-title, .cities-title {
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+
+.advantages-number, .advantages-description, .cities-description {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
+.search-hotels {
+  color: #000000;
+  background-color: #FFFFFF;
+  text-align: center;
+}
+
+.search-hotels-title {
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.search-hotels-description {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.button-hotels {
+  font-size: 20px;
+  line-height: 36px;
+ }
+
+.subscribe-index {
+  color: #FFFFFF;
+  background-color: #000000;
+  background-image: url("../img/footer-background.png");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  text-align: center;
+  text-decoration: none;
+}
+
+.subscribe-title {
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.subscribe-description, .button-subscribe {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.button-subscribe {
+  background-color: #83B3D3;
+  color: #FFFFFF;
+}
+
+.footer-contacts {
+  color: #000000;
+  background-color: #FFFFFF;
+}
+
+.contacts-phone {
+  font-size: 40px;
+  line-height: 40px;
+}
+
+.catalog-wrap {
+  color: #FFFFFF;
+  background-color: #000000;
+  background-image: url("../img/catalog-background.png");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  text-align: center;
+  text-decoration: none;
+}
+
+.catalog-title {
+  font-size: 60px;
+  line-height: 78px;
+  font-weight: 700;
+}
+
+.breadcrumbs-link {
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.catalog-filter-title {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.control-label {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.button-apply, .button-favourites {
+  background-color: #83B3D3;
+  color: #FFFFFF;
+}
+
+.button-reset {
+  color: #ffffff;
+}
+
+.sorting-wrap, .hotels-wrap {
+  color: #000000;
+  background-color: #FFFFFF;
+  text-decoration: none;
+}
+
+.sorting-result {
+  font-size: 30px;
+  line-height: 39px;
+  font-weight: 700;
+}
+
+.hotel-title {
+  font-size: 24px;
+  line-height: 31px;
+  font-weight: 700;
+}
+
+.hotel-type, .hotel-price {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.button-favourites-current {
+  background-color: #7DB54F;
+  color: #FFFFFF;
+}
+
+.button-upload {
+  font-size: 20px;
+  line-height: 26px;
+  background-color: #83B3D3;
+  color: #FFFFFF;
+}
+
+.pagination {
+  color: #000000;
+  background-color: #FFFFFF;
+}
+
+.pagination-link {
+  color: #FFFFFF;
+  background-color: #83B3D3;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.pagination-current {
+  background-color: #F2F2F2;
+  color: #000000;
+}
+
+.hotelsonpage-result {
+  line-height: 24px;
+}
+
+.subscribe {
+  color: #000000;
+  background-color: #FFFFFF;
+  text-align: center;
+}

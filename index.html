@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
     <header class="page-header">
@@ -37,16 +38,18 @@
             </a>
           </li>
           <li class="navigation-item">
-            <button class="navigation-link navigation-button" type="button">Хочу сюда!</button>
+            <button class="button navigation-link navigation-button" type="button">Хочу сюда!</button>
           </li>
         </ul>
       </nav>
     </header>
     <main class="main-index">
-      <img class="logo" src="img/index-logo.png" width="1200" height="485" alt="Картинка «Седона»">
-      <h1 class="">Седона — небольшой городок в Аризоне,
-        заслуживающий большего!</h1>  <!--нужен ли класс?-->
-      <h2 class="">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</h2> <!--нужен ли класс?-->
+      <div class="index-logo" >
+        <img class="index-img" src="img/index-logo.png" width="1200" height="485" alt="Картинка «Город Седона»" <!--логотипную картинку не знаю как отдельную картинку сделать или как бэеграунд?-->
+        <h1 class="logo-title">Седона — небольшой городок в Аризоне, <br>
+          заслуживающий большего!</h1>  <!--нужен ли класс?-->
+        <h2 class="logo-description">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</h2> <!--нужен ли класс?-->
+      </div>
       <section class="advantages advantages-list">
         <section class="advantages-item">
           <div>
@@ -111,10 +114,10 @@
         <button class="button button-hotels" type="submit">Поиск гостиницы в Седоне</button>
       </section>
     </main>
-    <footer>
-      <section class="subscribe">
-        <img class="subscribe-img img-footer" src="img/footer-background.png" width="1200" height="400" alt="Бэкграунд футер">
-        <h2 class="subscribe-title visually-hidden">Подпишитесь на рассылку</h2>
+    <footer class="index-footer">
+      <section class="subscribe-index">
+        <!--<img class="subscribe-img img-footer" src="img/footer-background.png" width="1200" height="400" alt="Бэкграунд футер">-->
+        <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
         <p class="subscribe-description">Только полезная информация и никакого спама, <br> честное бойскаутское!</p>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
             <input type="text" id="subscribe-mail" name="subscribe-mail" placeholder="Ваш e-mail">
