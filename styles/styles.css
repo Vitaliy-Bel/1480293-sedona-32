@@ -14,7 +14,15 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
@@ -42,6 +50,35 @@ a {
 .page-header {
   color: #000000;
   background: #FFFFFF;
+}
+
+
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 1200px;
+  margin: 0 auto;
+
+
+}
+
+.navigation-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  width: 309px;
+  margin-left: 71px;
+}
+
+.navigation-user {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  width: 250px;
+  margin-right: 71px;
 }
 
 .page {
@@ -75,13 +112,57 @@ a {
   line-height: 36px;
 }
 
+.main-container {
+  flex-grow: 1; /* не понимаю зачем так и так работает*/
+}
+
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
+}
 
 .advantages {
+  display: flex;
+  flex-direction: column;
   color: #000000;
   background-color: #FFFFFF;
   text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.advantages-item {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.cities-list {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+
+.advantages-one {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+
+.cities-item {
+  width: 400px; /* Почему работает только с этим?*/
+}
+
+.advantages-others {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
 
 
+.advantages-others-item {
+  width: 400px;  /* Почему работает только с этим?*/
 }
 
 .advantages-title, .cities-title {
@@ -90,10 +171,31 @@ a {
   text-transform: uppercase;
 }
 
+.cities-img {
+  text-align: center;
+}
+
 .advantages-number, .advantages-description, .cities-description {
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
+}
+
+.index-footer-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-contacts-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 72px;
+}
+
+.social-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
 }
 
 .search-hotels {
@@ -127,6 +229,7 @@ a {
   text-align: center;
   text-decoration: none;
 }
+
 
 .subscribe-title {
   font-size: 30px;
@@ -170,9 +273,49 @@ a {
   font-weight: 700;
 }
 
+.breadcrumbs {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+}
+
 .breadcrumbs-link {
   font-size: 16px;
   line-height: 21px;
+}
+
+.catalog-filter {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  margin: 0 71px;
+
+}
+
+.filter-group-infrastructure {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 150px;
+  margin-right: 67px;
+  text-align: left;
+
+
+
+}
+
+.filter-group-type {
+  width: 144px;      /*почему не работает без этого, хотя все отступы и размеры остальных 3- блоков выставил?*/
+
+}
+
+.catalog-filter-group {
+  margin: 0;
+  padding: 0;
+  border: 0; /* Все равно ширина 154. Почему?*/
+
 }
 
 .catalog-filter-title {
@@ -184,6 +327,24 @@ a {
 .control-label {
   font-size: 18px;
   line-height: 24px;
+}
+
+
+
+
+.filter-group-toggle {
+  margin: 0;
+  padding: 0;
+  width: 287px;
+  margin-left: 167px;
+}
+
+.button-container {
+  margin: 0;
+  padding: 0;
+  width: 160px;
+  margin-left: 81px;
+
 }
 
 .button-apply, .button-favourites {
@@ -201,10 +362,41 @@ a {
   text-decoration: none;
 }
 
+.sorting-wrap {
+  display: flex;
+  width: 1057px;
+  margin: 0 auto;
+  padding: 0;
+
+}
+
 .sorting-result {
   font-size: 30px;
   line-height: 39px;
   font-weight: 700;
+}
+
+.hotels-wrap {
+  width: 1057px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.hotels {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.hotel {
+  display: flex;
+
+}
+
+.hotel-img {
+  width: 180px;
+  margin-right: 36px;
 }
 
 .hotel-title {
@@ -218,6 +410,11 @@ a {
   line-height: 24px;
 }
 
+.rating {
+margin-left: auto;
+}
+
+
 .button-favourites-current {
   background-color: #7DB54F;
   color: #FFFFFF;
@@ -228,9 +425,15 @@ a {
   line-height: 26px;
   background-color: #83B3D3;
   color: #FFFFFF;
+  align-items: center;
+}
+
+.pagination-wrap {
+  display: flex;
 }
 
 .pagination {
+  display: flex;
   color: #000000;
   background-color: #FFFFFF;
 }
