@@ -19,7 +19,7 @@ html {
 }
 
 body {
-  margin: 0;
+
   display: flex;
   flex-direction: column;
   min-height: 100%;
@@ -28,6 +28,7 @@ body {
   line-height: 21px;
   color: #333333;
   background-color: #FFFFFF;
+  margin: 0;
   ;
 }
 
@@ -47,44 +48,78 @@ a {
   text-transform: uppercase;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .page-header {
+  width: 1200px;
   color: #000000;
   background: #FFFFFF;
-}
+  margin: 0 auto;  /*Почему оно нужно? Что-то сломало и теперь без этого не центрует.*/}
 
 
 
 .navigation {
   display: flex;
   justify-content: space-between;
-  width: 1200px;
+  align-items: center;
+  width: 1056px;
   margin: 0 auto;
-
-
 }
+
 
 .navigation-list {
   display: flex;
   justify-content: space-between;
-  margin: 0;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 19px 0 20px 0;
   padding: 0;
   width: 309px;
-  margin-left: 71px;
+  list-style-type: none;
+}
+
+.page-navigation-logo {
+  display: block;
 }
 
 .navigation-user {
   display: flex;
-  justify-content: space-between;
-  margin: 0;
+  list-style-type: none;
+  margin: 14px 0;
   padding: 0;
   width: 250px;
-  margin-right: 71px;
+}
+
+.navigation-item {
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-link{
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-user .navigation-link {
+  min-width: 45px;
+  min-height: 37px;
 }
 
 .page {
+  display: block;
   font-family: "PT Sans", sans-serif;
-  line-height: 20px;
-  line-height: 21px;
+  font-size: 20px;
+  line-height: 26px;
   font-weight: 700;
   text-align: center;
   color: #000000;  /*  Не понимаю зачем это, если в page-header есть это */
@@ -92,10 +127,43 @@ a {
   text-decoration: none;
 }
 
+.navigation-button {
+  margin: 0;
+  padding: 0;
+  min-width: 160px;
+  min-height: 37px;
+}
+
+
+.main-container {
+  display: flex;
+  flex-grow: 1; /* не понимаю зачем так и так работает*/
+  margin-top: -5px; /*только прозрачность надо наверное? */
+}
+
+.main-index {
+  color: #000000;
+  background-color: #FFFFFF;
+  background-size: 100% auto;
+}
+
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
 .index-logo {
   color: #000000;
   background-color: #FFFFFF;
   text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.index-img {
+  display: block;
+  margin-bottom: 63px;
+
 }
 
 .logo-title {
@@ -104,22 +172,20 @@ a {
   line-height: 36px;
   text-transform: uppercase;
   font-weight: 700;  /*  Почему не работает? Потому что апперкейс есть? */
+  padding: 3px 0;
+  margin-bottom: 23px;
+
 }
 
 .logo-description {
   font-family: "PT Sans", sans-serif;
   font-size: 22px;
   line-height: 36px;
+  margin: 0;
+  margin-bottom: 79px;
 }
 
-.main-container {
-  flex-grow: 1; /* не понимаю зачем так и так работает*/
-}
-
-.page-container {
-  width: 1200px;
-  margin: 0 auto;
-}
+/*Преимущества*/
 
 .advantages {
   display: flex;
@@ -127,14 +193,49 @@ a {
   color: #000000;
   background-color: #FFFFFF;
   text-align: center;
+
   padding: 0;
   margin: 0;
+  list-style-type: none;
+
 }
+
+.advantages-one, .advantages-others-item {
+  display: flex;
+  margin: 0;
+  padding-top: 98px;
+  padding-bottom: 77px;
+  flex-direction: column;
+  width: 400px;
+  background: rgba(131, 179, 211, 0.12);
+  color: #FFFFFF;
+}
+
+
+.advantages-title, .cities-title {
+  font-size: 24px;
+  line-height: 28px;
+  padding-bottom: 25px;
+  margin: 0;
+}
+
+.advantages-number, .advantages-description, .cities-description {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.advantages-number {
+  padding-bottom: 25px;
+}
+
 
 .advantages-item {
   display: flex;
   padding: 0;
   margin: 0;
+  list-style-type: none;
 }
 
 .cities-list {
@@ -142,83 +243,72 @@ a {
   justify-content: space-between;
   padding: 0;
   margin: 0;
+  list-style-type: none;
 }
 
-.advantages-one {
-  display: flex;
-  flex-direction: column;
-  width: 400px;
-}
+
 
 .cities-item {
   width: 400px; /* Почему работает только с этим?*/
+  margin: 0;
+  padding-top: 91px;
+  padding-bottom: 79px;
+  background-color: #83B3D2;
+  color: #FFFFFF;
 }
 
 .advantages-others {
   display: flex;
   padding: 0;
   margin: 0;
+  list-style-type: none;
 }
 
 
-.advantages-others-item {
-  width: 400px;  /* Почему работает только с этим?*/
-}
-
-.advantages-title, .cities-title {
-  font-size: 24px;
-  line-height: 28px;
-  text-transform: uppercase;
-}
 
 .cities-img {
   text-align: center;
+  margin-bottom: 23px;
 }
 
-.advantages-number, .advantages-description, .cities-description {
-  font-size: 18px;
-  line-height: 21px;
-  font-weight: 400;
-}
-
-.index-footer-container {
-  width: 1200px;
-  margin: 0 auto;
-}
-
-.footer-contacts-container {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 72px;
-}
-
-.social-list {
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
+/*ЗАИНТЕРЕСОВАЛИСЬ*/
 
 .search-hotels {
   color: #000000;
   background-color: #FFFFFF;
   text-align: center;
+  margin: 91px 0;
 }
 
 .search-hotels-title {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 15px;
 }
 
 .search-hotels-description {
   font-size: 18px;
   line-height: 21px;
+  margin-bottom: 73px;
 }
 
 .button-hotels {
   font-size: 20px;
   line-height: 36px;
+  min-width: 575px;
+  padding-top: 13px;
+  padding-bottom: 17px;
  }
+
+/*ФУТЕР*/
+
+.index-footer-container {
+
+  width: 1200px;
+  margin: 0 auto;
+}
 
 .subscribe-index {
   color: #FFFFFF;
@@ -228,71 +318,132 @@ a {
   background-repeat: no-repeat;
   text-align: center;
   text-decoration: none;
+  margin: 0;
+  padding: 94px 0;
 }
-
 
 .subscribe-title {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  margin: 0;
+  padding-bottom: 15px;
+
 }
 
 .subscribe-description, .button-subscribe {
   font-size: 20px;
   line-height: 26px;
+  margin: 0;
+  padding-bottom: 26px;
+
+}
+
+.subscribe-form {
+  width: 800px;
+  margin: 0 auto;
+
 }
 
 .button-subscribe {
   background-color: #83B3D3;
   color: #FFFFFF;
+  min-width: 200px;
+  padding: 0;
 }
 
 .footer-contacts {
+  width: 1056px;
   color: #000000;
   background-color: #FFFFFF;
+  margin: 0 auto;
 }
+
+.footer-contacts-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.social-list {
+  display: flex;
+  width: 107px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+
 
 .contacts-phone {
   font-size: 40px;
   line-height: 40px;
 }
 
+/*Каталог страница*/
+
 .catalog-wrap {
   color: #FFFFFF;
+  width: 1056px;
+  margin: 0 auto;
   background-color: #000000;
   background-image: url("../img/catalog-background.png");
   background-size: 100% auto;
   background-repeat: no-repeat;
-  text-align: center;
   text-decoration: none;
+  padding: 0 72px;
 }
 
 .catalog-title {
   font-size: 60px;
   line-height: 78px;
   font-weight: 700;
+  margin: 0;
+  margin-right: auto;
+
 }
 
 .breadcrumbs {
   display: flex;
-  margin: 0;
+  margin-top: 5px;
+  margin-bottom: 45px;
   padding: 0;
+  list-style-type: none;
+}
 
+.breadcrumbs-item {
+  display: flex;
+  align-items: center
+}
+
+.link-index {
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin-right: 26px;
 }
 
 .breadcrumbs-link {
   font-size: 16px;
   line-height: 21px;
+  align-items: center;
+}
+
+
+/*Поиск каталога*/
+
+.catalog-products {
+  padding-bottom: 83px;
 }
 
 .catalog-filter {
   display: flex;
-  justify-content: space-between;
   margin: 0;
   padding: 0;
-  margin: 0 71px;
+  }
 
-}
+
 
 .filter-group-infrastructure {
   display: flex;
@@ -301,13 +452,16 @@ a {
   width: 150px;
   margin-right: 67px;
   text-align: left;
-
-
-
 }
 
+
+
+
+
 .filter-group-type {
-  width: 144px;      /*почему не работает без этого, хотя все отступы и размеры остальных 3- блоков выставил?*/
+  width: 144px;
+  margin: 0;      /*почему не работает без этого, хотя все отступы и размеры остальных 3- блоков выставил?*/
+  margin-right: 167px; /*Если это указываешь то апартаменты не влезают в одну строку*/
 
 }
 
@@ -322,6 +476,17 @@ a {
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.catalog-filter-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.catalog-filter-item:not(:last-child) {
+  margin-bottom: 13px;
 }
 
 .control-label {
@@ -336,16 +501,22 @@ a {
   margin: 0;
   padding: 0;
   width: 287px;
-  margin-left: 167px;
-}
+ }
 
 .button-container {
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+
+  margin-left: auto;
   padding: 0;
   width: 160px;
-  margin-left: 81px;
+  justify-content: flex-end;
+ }
 
-}
+ .button-apply {
+   min-height: 48px;
+ }
+
 
 .button-apply, .button-favourites {
   background-color: #83B3D3;
@@ -353,6 +524,13 @@ a {
 }
 
 .button-reset {
+  background-color: transparent;
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 400;
+
+  border: 0;
   color: #ffffff;
 }
 
@@ -364,33 +542,55 @@ a {
 
 .sorting-wrap {
   display: flex;
-  width: 1057px;
+  width: 1056px;
   margin: 0 auto;
-  padding: 0;
+  padding-top: 50px;
+  padding-bottom: 45px
 
+}
+
+.sorting {
+  margin-right: 81px;
 }
 
 .sorting-result {
   font-size: 30px;
   line-height: 39px;
   font-weight: 700;
+  margin-right: 191px;
+}
+
+.sorting-wrap .button {
+  display: block;
+  width: 48px;
+  height: 48px;
+}
+
+.sorting-wrap .button:not(:last-child){
+  margin-right: 8px;
 }
 
 .hotels-wrap {
-  width: 1057px;
+  width: 1056px;
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
-  padding: 0;
+
 }
 
 .hotels {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 .hotel {
   display: flex;
+  margin-top: 28px;
+  margin-bottom: 30px;
+
 
 }
 
@@ -403,17 +603,49 @@ a {
   font-size: 24px;
   line-height: 31px;
   font-weight: 700;
+  margin: 0;
 }
+
+.type-price{
+  display: flex;
+  width: 235px;
+  justify-content: space-between;
+  margin-bottom: 31px;
+}
+
 
 .hotel-type, .hotel-price {
   font-size: 18px;
   line-height: 24px;
+  margin: 0;
+}
+
+.button-detailed {
+  width: 151px;
+  height: 37px;
+}
+
+.button-favourites {
+  width: 160px;
+  height: 37px;
 }
 
 .rating {
-margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: auto;
+  align-items: center;
 }
 
+.hotel-rating {
+  display: block;
+  width: 160px;
+  height: 37px;
+  margin: 0;
+  padding: 0;
+  text-align: center;   /*По вертикали по центру не сделать*/
+}
 
 .button-favourites-current {
   background-color: #7DB54F;
@@ -421,11 +653,15 @@ margin-left: auto;
 }
 
 .button-upload {
+  width: 625px;
+  height: 55px;
   font-size: 20px;
   line-height: 26px;
   background-color: #83B3D3;
   color: #FFFFFF;
-  align-items: center;
+  margin: 0 auto;
+  margin-top: 31px;
+  margin-bottom: 30px;  /*Что-то ту не то)))*/
 }
 
 .pagination-wrap {
@@ -436,9 +672,13 @@ margin-left: auto;
   display: flex;
   color: #000000;
   background-color: #FFFFFF;
+  list-style-type: none;
 }
 
 .pagination-link {
+  display: block;
+  width: 55px;
+  height: 55px;
   color: #FFFFFF;
   background-color: #83B3D3;
   text-decoration: none;
@@ -447,10 +687,16 @@ margin-left: auto;
   font-weight: 700;
 }
 
+.pagination-item:not(:last-child) {
+  margin-right: 7px;
+}
+
 .pagination-current {
   background-color: #F2F2F2;
   color: #000000;
 }
+
+
 
 .hotelsonpage-result {
   line-height: 24px;
