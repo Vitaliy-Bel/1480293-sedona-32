@@ -87,8 +87,13 @@ a {
   list-style-type: none;
 }
 
+.navigation-logo {
+  z-index: 2;
+}
+
 .page-navigation-logo {
   display: block;
+  /*z-index: 2;*/   /*Почему так не работает?*/
 }
 
 .navigation-user {
