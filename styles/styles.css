@@ -37,6 +37,8 @@ a {
 }
 
 .button {
+  display: inline-block;
+  box-sizing: border-box;
   font-family: inherit;
   font-size: 16px;
   line-height: 21px;
@@ -46,6 +48,8 @@ a {
   background-color: #756257;
   text-decoration: none;
   text-transform: uppercase;
+  border: none;
+  cursor: pointer;
 }
 
 .visually-hidden {
@@ -99,26 +103,37 @@ a {
 .navigation-user {
   display: flex;
   list-style-type: none;
+  align-items: center;
   margin: 14px 0;
   padding: 0;
   width: 250px;
 }
 
 .navigation-item {
+  position: relative;
   margin: 0;
   padding: 0;
 }
 
+.page-current::after {
+  position: absolute;
+  right: 0px;
+  bottom: -20px;
+  left: 0px;
+  height: 2px;
+  background-color: #756257;
+  content: "";
+}
+
 .navigation-link{
+  position: relative;
   display: block;
   margin: 0;
   padding: 0;
 }
 
-.navigation-user .navigation-link {
-  min-width: 45px;
-  min-height: 37px;
-}
+
+
 
 .page {
   display: block;
@@ -132,11 +147,51 @@ a {
   text-decoration: none;
 }
 
+
+.navigation-user .navigation-link {
+  min-width: 18px;
+  min-height: 18px;
+}
+
+.navigation-search {
+  margin-right: 21px;
+}
+
+.navigation-favourites {
+  margin-right: 33px;
+}
+
+.navigation-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+
+}
+
+.navigation-favourites::after {
+  position: absolute;
+  content:  '12';
+  /*display: block;*/
+  width: 19px;
+  height: 19px;
+  top: -8px;
+  right: -12px;
+  background: #7DB54F;
+  border-radius: 50%;
+  font-size: 10px;
+  color: #ffffff;
+  text-align: center;
+  }
+
 .navigation-button {
-  margin: 0;
-  padding: 0;
   min-width: 160px;
   min-height: 37px;
+  padding: 0;
+  border-radius: 4px;
+  /*margin-left: auto; почему это не работает??*/
 }
 
 
@@ -158,6 +213,7 @@ a {
 }
 
 .index-logo {
+  position: relative;
   color: #000000;
   background-color: #FFFFFF;
   text-align: center;
@@ -168,8 +224,21 @@ a {
 .index-img {
   display: block;
   margin-bottom: 63px;
-
 }
+
+.index-logo::after {    /*не понятно) почему относительно index-img не работает*/
+  content: '';
+  display: block;
+  position: absolute;
+  /*bottom: -63px;*/
+  top: 428px;
+  left: 0;
+  height: 57px;
+  width: 1200px;
+  background-image: url("../img/index-logo-bottom.svg");
+}
+
+
 
 .logo-title {
   font-family: "PT Sans", sans-serif;
@@ -179,7 +248,6 @@ a {
   font-weight: 700;  /*  Почему не работает? Потому что апперкейс есть? */
   padding: 3px 0;
   margin-bottom: 23px;
-
 }
 
 .logo-description {
@@ -212,10 +280,18 @@ a {
   padding-bottom: 77px;
   flex-direction: column;
   width: 400px;
-  background: rgba(131, 179, 211, 0.12);
+
+}
+
+.advantages-one {
+  background-color: rgba(131, 179, 211);
   color: #FFFFFF;
 }
 
+.advantages-others-item {
+  background-color: rgba(131, 179, 211, 0.12);
+  color: #000000;
+}
 
 .advantages-title, .cities-title {
   font-size: 24px;
@@ -258,8 +334,12 @@ a {
   margin: 0;
   padding-top: 91px;
   padding-bottom: 79px;
-  background-color: #83B3D2;
-  color: #FFFFFF;
+  background-color: rgba(131, 179, 211, 0.12);
+  color: #000000;
+}
+
+.cities-item:nth-child(2), .advantages-others-item:nth-child(2) {
+  background-color: #ffffff;
 }
 
 .advantages-others {
@@ -305,6 +385,7 @@ a {
   min-width: 575px;
   padding-top: 13px;
   padding-bottom: 17px;
+  border-radius: 10px;
  }
 
 /*ФУТЕР*/
@@ -342,20 +423,35 @@ a {
   margin: 0;
   padding-bottom: 26px;
 
+
 }
 
 .subscribe-form {
+  display: flex;
   width: 800px;
   margin: 0 auto;
-
 }
+
+.subscribe-field {
+  margin: 0;
+  padding: 0 20px;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+  border: none;
+  flex-grow: 1;
+  width: 600px;
+  border-radius: 10px 0 0 10px;
+ }
 
 .button-subscribe {
   background-color: #83B3D3;
   color: #FFFFFF;
   min-width: 200px;
-  padding: 0;
-}
+  font-weight: 700;
+  padding: 17px 0;
+  border-radius: 0 10px 10px 0;
+ }
 
 .footer-contacts {
   width: 1056px;
@@ -373,17 +469,48 @@ a {
 
 .social-list {
   display: flex;
+  align-items: center;
   width: 107px;
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
+.button-social {
+  display: block;
+  margin-right: 30px;
 
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+.button-social:nth-child(3n) {
+  margin-right: 0px; /*почему-то не обнуляет*/
+}
+
+.button-tw {
+  width: 15px;
+  height: 18px;
+  background-image: url("../img/twitter.svg");
+}
+
+.button-fb {
+  width: 10px;
+  height: 18px;
+  background-image: url("../img/facebook.svg");
+}
+
+.button-yt {
+  width: 16px;
+  height: 20px;
+  background-image: url("../img/youtube.svg");
+}
 
 .contacts-phone {
   font-size: 40px;
   line-height: 40px;
+  color: #000000;
 }
 
 /*Каталог страница*/
@@ -424,10 +551,29 @@ a {
 
 .link-index {
   display: block;
+  position: relative;
   width: 12px;
   height: 12px;
   margin-right: 26px;
+  background-image: url("../img/home.svg");
 }
+
+
+.link-index::after {
+  content: "";
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  left: 23px;
+  height: 8px;
+  width: 5px;
+  background-image: url("../img/arrow.svg");
+  background-repeat: no-repeat;
+  color: #FFFFFF;
+
+}
+
+
 
 .breadcrumbs-link {
   font-size: 16px;
@@ -484,14 +630,30 @@ a {
   margin-bottom: 30px;
 }
 
+
+
 .catalog-filter-list {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
+.control {
+  display: flex;
+}
+
 .catalog-filter-item:not(:last-child) {
   margin-bottom: 13px;
+}
+
+.control-input {
+  display: block;
+  margin: 0;
+  width: 20px;
+  height: 20px;
+  margin-right: 19px;
+  background: #FFFFFF;
+  border: none;
 }
 
 .control-label {
@@ -505,22 +667,99 @@ a {
 .filter-group-toggle {
   margin: 0;
   padding: 0;
-  width: 287px;
+
+
  }
+
+.catalog-filter-label {
+
+}
+
+ .catalog-filter-wrapper {
+  display: flex;
+
+
+}
+
+.catalog-filter-input {
+  box-sizing: border-box;
+  width: 143px;  /*почему без этого не работает?*/
+  margin: 0;
+  padding: 12px 14px;
+  text-align: right;
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 400;
+  border:2px solid #FFFFFF;
+  background-color: transparent;
+
+}
+
+.catalog-filter-input:nth-child(1) {
+  border-radius: 4px 0 0 4px;
+}
+
+.catalog-filter-input:nth-child(2) {
+  border-radius: 0 4px 4px 0;  /* не работает*/
+}
+
+.range {
+  position: relative;
+  height: 4px;
+  margin-top: 32px;
+  background-color: #FFFFFF;
+  opacity: 0.3;
+}
+
+.range-wrapper {
+  position: absolute;
+  height: 4px;
+  width: 227px;
+  background-color: #FFFFFF;
+
+}
+
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #FFFFFF;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.range-toggle:hover {
+  background-color: #DBB590;
+}
+
+.range-toggle:active,
+.range-toggle:focus {
+  outline: 3px solid #DBB590;
+}
+
+.toggle-min {
+  top: -8px;
+  left: -10px;
+}
+
+.toggle-max {
+  top: -8px;
+  right: -10px;
+}
+
 
 .button-container {
   display: flex;
   flex-direction: column;
-
   margin-left: auto;
   padding: 0;
   width: 160px;
   justify-content: flex-end;
- }
+}
 
  .button-apply {
    min-height: 48px;
- }
+}
 
 
 .button-apply, .button-favourites {
