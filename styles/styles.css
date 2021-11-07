@@ -442,6 +442,7 @@ a {
   flex-grow: 1;
   width: 600px;
   border-radius: 10px 0 0 10px;
+  background-color: #F2F2F2;
  }
 
 .button-subscribe {
@@ -802,17 +803,51 @@ a {
   line-height: 39px;
   font-weight: 700;
   margin-right: 191px;
+
+}
+
+.select-control {
+  font-size: 18px;
+  line-height: 23px;
+  width: 287px;
+  padding: 12px;
+}
+
+
+.sorting-button {
+  display: flex;
+  margin-left: auto;
 }
 
 .sorting-wrap .button {
   display: block;
   width: 48px;
   height: 48px;
+  background-color: #FFFFFF;
+  border: 2px solid #E6E6E6;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .sorting-wrap .button:not(:last-child){
   margin-right: 8px;
 }
+
+.button-icons {
+  background-image: url("../img/icons.svg");
+}
+
+.button-list {
+  background-image: url("../img/list.svg");
+}
+
+.button-cards {
+  background-image: url("../img/cards.svg");
+  border: 2px solid #000000;
+}
+
 
 .hotels-wrap {
   width: 1056px;
