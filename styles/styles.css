@@ -771,38 +771,22 @@ a {
 
 }
 
-.button-social:last-child {
-  margin-right: 0; /*почему-то не обнуляет*/
-}
-
 .social-img {
   fill: #83B3D3;
 }
 
-
-/*.button-tw {
-  width: 15px;
-  height: 18px;
-  background-image: url("../img/twitter.svg");
+.social-img:hover {
+  fill: #68A2CA;
 }
 
-.button-fb {
-  width: 10px;
-  height: 18px;
-  background-image: url("../img/facebook.svg");
+.social-img:focus {
+  outline: 3px solid #83B3D3;
+  border-radius: 10px;
 }
 
-.button-yt {
-  width: 16px;
-  height: 20px;
-  background-image: url("../img/youtube.svg");
-}*/
-
-.button-social:hover {
-  background-color: #68A2CA;
+.social-img:active {
+  opacity: 0.3;
 }
-
-
 
 .contacts-phone {
   font-size: 40px;
@@ -810,9 +794,38 @@ a {
   color: #000000;
 }
 
+.contacts-phone:hover {
+  color: #756257;
+}
+
+.contacts-phone:focus {
+  outline: 3px solid #83B3D3;
+  border-radius: 10px;
+}
+
+.contacts-phone:active {
+  color: #756257;
+  opacity: 0.3;
+}
+
 .htmlacademy-link-icon {
   fill: #000000;
 }
+
+.htmlacademy-link-icon:hover {
+  fill: #756257;
+}
+
+.htmlacademy-link-icon:focus {
+  outline: 3px solid #83B3D3;
+  border-radius: 10px;
+}
+
+.htmlacademy-link-icon:active {
+  fill: #756257;
+  opacity: 0.3;
+}
+
 
 /*Каталог страница*/
 
@@ -882,6 +895,18 @@ a {
   align-items: center;
 }
 
+.breadcrumbs-link:hover {
+  opacity: 0.6;
+}
+
+.breadcrumbs-link:focus {   /*Не понятно!!!*/
+  outline: 3px solid #83B3D3;
+  border-radius: 10px;
+}
+
+.breadcrumbs-link:active {
+  opacity: 0.3;
+}
 
 /*Поиск каталога*/
 
@@ -967,6 +992,7 @@ a {
   height: 20px;
   background-color: #FFFFFF;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .control-input[type="checkbox"]:checked + .control-square::after {
@@ -979,6 +1005,20 @@ a {
   height: 12px;
 
 }
+
+.control-square:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.control-square:focus {
+  background-color: rgba(255, 255, 255, 0.6);
+  outline: 3px solid #83B3D3;
+}
+
+.control-square:active {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
 
 .control-label {
   font-size: 18px;
@@ -1010,14 +1050,16 @@ a {
 .filter-group-toggle {
   margin: 0;
   padding: 0;
+}
 
-
- }
+.control-circle:focus {
+  outline: 3px solid #83B3D3;
+}
 
 
  .catalog-filter-wrapper {
   display: flex;
-  border:2px solid #FFFFFF;
+
   border-radius: 4px;
 
 }
@@ -1026,10 +1068,24 @@ a {
   display: flex;
   box-sizing: border-box;
   width: 144px;
+  border:2px solid #FFFFFF;
 }
 
 .catalog-filter-label:nth-child(1) {
-  border-right: 2px solid #FFFFFF;
+  border-right: none;
+}
+
+.catalog-filter-label:hover{
+  border:2px solid rgba(255, 255, 255, 0.6);
+
+}
+
+.catalog-filter-label:focus {
+  outline: 3px solid #83B3D3;
+}
+
+.catalog-filter-label:active {
+  background-color: #756257;
 }
 
 .catalog-filter-input {
@@ -1122,8 +1178,22 @@ a {
 .button-apply, .button-favourites {
   background-color: #83B3D3;
   color: #FFFFFF;
-
 }
+
+.button-apply:hover {
+  background-color: #68A2CA;
+}
+
+.button-apply:focus {
+  background-color: #68A2CA;
+  outline: 3px solid #FFFFFF;
+}
+
+.button-apply:active {
+  background-color:#68A2CA;
+  color: rgba(255, 255, 255, 0.3);
+}
+
 
 .button-reset {
   background-color: transparent;
@@ -1320,6 +1390,7 @@ a {
 .pagination-wrap {
   display: flex;
   margin-top: 31px;
+  margin-bottom: 89px;
 
 }
 
@@ -1348,6 +1419,22 @@ a {
   font-weight: 700;
   border-radius: 4px;
 }
+
+.pagination-link:hover {
+  background-color: #68A2CA;
+}
+
+.pagination-link:focus {
+  background-color: #68A2CA;
+  outline: 3px solid #756257;
+}
+
+.pagination-link:active {
+  background-color:#68A2CA;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+
 
 .pagination-item:not(:last-child) {
   margin-right: 7px;
@@ -1405,6 +1492,10 @@ a {
   width: 715px;
 }
 
+.modal-container-close {
+  display: none;
+}
+
 .modal-title {
   margin: 0;
   font-family: "PT Sans Narrow", sans-serif;
@@ -1431,6 +1522,21 @@ a {
   background-position: center;
   cursor: pointer;
 }
+
+.modal-close-button:hover {
+  background-color: #E6E6E6;
+}
+
+.modal-close-button:focus {
+  background-color: #E6E6E6;
+  outline: 3px solid #83B3D3;
+}
+
+.modal-close-button:active {
+  background-color: #E6E6E6;
+  opacity: 0.3;  /*как сделать как в фигме? Прозрачен должен быть только крестик */
+}
+
 
 .modal-form {
   margin-top: 54px;
@@ -1465,6 +1571,14 @@ a {
   font-weight: 700;
 }
 
+.field-input:hover {
+  background-color: #E6E6E6;
+}
+
+.field-input:focus {
+  background-color: #E6E6E6;
+  outline: 3px solid #83B3D3;
+}
 
 
 .field-input::-webkit-input-placeholder {
@@ -1567,6 +1681,21 @@ a {
   border-radius: 10px;
 }
 
+.button-form-search:hover {
+  background-color: #68A2CA;
+}
+
+.button-form-search:focus {
+  background-color: #68A2CA;
+  outline: 3px solid #756257;
+}
+
+.button-form-search:active {
+  background-color:#68A2CA;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+
 .minus, .plus {
   margin: 0;
 }
@@ -1596,12 +1725,18 @@ a {
   height: 1px;
   background-color: rgba(0, 0, 0, 0.3);
   content: "";
+  cursor: pointer;
 }
 
 .plus::after {
   transform: rotate(90deg);
 }
 
-.modal-container-close {
-  display: none;
+.minus:hover::after, .plus:hover::before, .plus:hover::after {
+  background-color: #000000;
+}
+
+.minus:focus::after, .plus:focus::before, .plus:focus::after {
+  background-color: #000000;
+  outline: 3px solid #83B3D3;
 }
