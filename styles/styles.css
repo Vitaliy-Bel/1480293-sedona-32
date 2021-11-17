@@ -67,15 +67,14 @@ a {
   width: 1200px;
   color: #000000;
   background: #FFFFFF;
-  margin: 0 auto;  /*Почему оно нужно? Что-то сломало и теперь без этого не центрует.*/}
-
+  margin: 0 auto;
+}
 
 
 .navigation {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 1056px;
+  width: 1080px;
   margin: 0 auto;
 }
 
@@ -85,9 +84,9 @@ a {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  margin: 19px 0 20px 0;
+  margin: 8px 139px 17px 0;
   padding: 0;
-  width: 309px;
+  width: 334px;
   list-style-type: none;
 }
 
@@ -103,9 +102,9 @@ a {
   display: flex;
   list-style-type: none;
   align-items: center;
-  margin: 14px 0;
   padding: 0;
-  width: 250px;
+  width: 260px;
+  margin: 10px 0 15px 199px;
 }
 
 .navigation-item {
@@ -116,19 +115,30 @@ a {
 
 .page-current::after {
   position: absolute;
-  right: 0px;
   bottom: -20px;
-  left: 0px;
+  left: 12px;
   height: 2px;
   background-color: #756257;
   content: "";
+  width: 70px;
+}
+
+.page-hotels-current::after {
+  position: absolute;
+  bottom: -19px;
+  left: 12px;
+  height: 2px;
+  background-color: #756257;
+  content: "";
+  width: 92px;
 }
 
 .navigation-link{
   position: relative;
   display: block;
   margin: 0;
-  padding: 0;
+  padding: 10px;
+  cursor: pointer;
 }
 
 
@@ -138,27 +148,27 @@ a {
   display: block;
   font-family: "PT Sans", sans-serif;
   font-size: 20px;
-  line-height: 26px;
+  line-height: 21px;
   font-weight: 700;
   text-align: center;
-  color: #000000;  /*  Не понимаю зачем это, если в page-header есть это */
+  color: #000000;
   background-color: #FFFFFF;
   text-decoration: none;
+  padding: 6px 12px;
 }
 
 .page:hover {
   color: #756257;
 }
 
-.page:focus {   /*Не понятно!!!*/
+.page:focus {
   outline: 3px solid #83B3D3;
-  box-sizing: border-box;
   border-radius: 10px;
 }
 
 .page:active {
   opacity: 0.3;
-  border: none; /*Иначе появляется бордер*/
+  border: none;
 }
 
 
@@ -173,25 +183,19 @@ a {
 
 .navigation-link:focus {  /*  ФИГНЯ!!  */
 
-  border: 3px solid #83B3D3;
-  box-sizing: border-box;
-  padding: 10px;
-  outline-color: #83B3D3;
+  outline: 3px solid #83B3D3;
   border-radius: 10px;
 }
 
 .navigation-link:active {
   opacity: 0.3;
-  border: none; /*Иначе появляется бордер*/
-}
-
-
-.navigation-search {
-  margin-right: 21px;
+  border: none;
 }
 
 .navigation-favourites {
-  margin-right: 33px;
+  position: relative;
+  margin-right: 23px;
+
 }
 
 .navigation-icon {
@@ -211,8 +215,8 @@ a {
   /*display: block;*/
   width: 19px;
   height: 19px;
-  top: -8px;
-  right: -12px;
+  top: 0px;
+  right: -4px;
   background: #7DB54F;
   border-radius: 50%;
   font-size: 10px;
@@ -225,14 +229,26 @@ a {
   min-height: 37px;
   padding: 0;
   border-radius: 4px;
-  /*margin-left: auto; почему это не работает??*/
 }
 
+.navigation-button:hover {
+  background-color: #615048;
+}
+
+.navigation-button:focus {
+  background-color: #615048;
+  outline: 3px solid #83B3D3;
+}
+
+.navigation-button:active {
+  background-color:#615048;
+  color: rgba(255, 255, 255, 0.3);
+}
 
 /*ПОПОВЕР*/
 .popover {
   position: absolute;
-  top: 36px;
+  top: 47px;
   right: -160px;
   z-index: 1;
   box-sizing: border-box;
@@ -274,27 +290,36 @@ a {
 .cart-item {
   display: grid;
   position: relative;
-  grid-template-columns: 309px 16px;
-  margin: 25px;
-  column-gap: 25px;
-  padding: 4px 0;
+  grid-template-columns: 245px 16px;
+  margin-top: 17px;
+  margin-left: 13px;
+  column-gap: 84px;
+  box-sizing: border-box;
+
 }
 
 
 
 .cart-item-desert, .cart-item-villas {
-  padding-left: 65px;
+  padding: 10px 10px 10px 75px;
+  cursor: pointer;
 }
 
+.cart-item-desert {
+  margin-bottom: -6px;
+}
 
+.cart-item-villas{
+  margin-bottom: 18px;
+}
 
 .cart-item-desert::before, .cart-item-villas::before {
   position: absolute;
   content: '';
   width: 48px;
   height: 48px;
-  top: 0px;
-  left: 0px;
+  top: 7px;
+  left: 10px;
 
   background-repeat: no-repeat;
   background-position: center;
@@ -305,20 +330,18 @@ a {
   background-image: url("../img/desert.jpg");
 }
 
-.cart-item:hover {
+.cart-item-desert:hover, .cart-item-villas:hover {
   opacity: 0.6;
 
 }
 
-.cart-item:focus {
+.cart-item-desert:focus, .cart-item-villas:focus {
   outline: 3px solid #83B3D3;
-  box-sizing: border-box;
-  width: 228px;
   border-radius: 10px;
 }
 
 
-.cart-item:active {
+.cart-item-desert:active, .cart-item-villas:active {
   opacity: 0.3;
 }
 
@@ -332,7 +355,7 @@ a {
   margin: 0;
 
   font-size: 18px;
-  line-height: 21px;  /* а высота блока почему то 20!*/
+  line-height: 21px;
   font-weight: 700;
   color: #000000;
 
@@ -355,17 +378,18 @@ a {
 .basket {
   fill: #000000;
   opacity: 0.2;
+  margin-top: 3px;
+  padding: 10px;
 }
 
 .basket:hover {
   opacity: 1;
 }
 
-.basket:focus {  /*ЕРУНДА!!!*/
+.basket:focus {
   outline: 3px solid #83B3D3;
   opacity: 1;
   border-radius: 10px;
-  padding: 5px;
 }
 
 .basket:active {
@@ -423,14 +447,23 @@ a {
 
 .index-img {
   display: block;
-  margin-bottom: 63px;
+  margin-bottom: 58px;
+}
+
+.index-logo::before {
+  content: '';
+  position: absolute;
+  top: 51px;
+  left: 371px;
+  height: 352px;
+  width: 458px;
+  background-image: url("../img/welcome.svg");
+
 }
 
 .index-logo::after {    /*не понятно) почему относительно index-img не работает*/
   content: '';
-  display: block;
   position: absolute;
-  /*bottom: -63px;*/
   top: 428px;
   left: 0;
   height: 57px;
@@ -447,13 +480,14 @@ a {
   text-transform: uppercase;
   font-weight: 700;  /*  Почему не работает? Потому что апперкейс есть? */
   padding: 3px 0;
-  margin-bottom: 23px;
+  margin-bottom: 33px;
 }
 
 .logo-description {
   font-family: "PT Sans", sans-serif;
   font-size: 22px;
   line-height: 36px;
+  font-weight: 400;
   margin: 0;
   margin-bottom: 79px;
 }
@@ -477,7 +511,6 @@ a {
   display: flex;
   margin: 0;
   padding-top: 98px;
-  padding-bottom: 77px;
   flex-direction: column;
   width: 400px;
 
@@ -486,18 +519,24 @@ a {
 .advantages-one {
   background-color: rgba(131, 179, 211);
   color: #FFFFFF;
+  padding-bottom: 77px;
 }
 
 .advantages-others-item {
   background-color: rgba(131, 179, 211, 0.12);
   color: #000000;
+  padding-bottom: 110px;
 }
 
 .advantages-title, .cities-title {
   font-size: 24px;
   line-height: 28px;
-  padding-bottom: 25px;
+  text-transform: uppercase;
   margin: 0;
+}
+
+.advantages-title {
+  padding-bottom: 29px;
 }
 
 .advantages-number, .advantages-description, .cities-description {
@@ -508,7 +547,7 @@ a {
 }
 
 .advantages-number {
-  padding-bottom: 25px;
+  padding-bottom: 32px;
 }
 
 
@@ -533,14 +572,22 @@ a {
   position: relative;
   width: 400px; /* Почему работает только с этим?*/
   margin: 0;
-  padding-top: 184px;
-  padding-bottom: 79px;
+  padding-top: 185px;
+  padding-bottom: 90px;
   background-color: rgba(131, 179, 211, 0.12);
   color: #000000;
 }
 
-.cities-item:nth-child(2), .advantages-others-item:nth-child(2) {
+.cities-title {
+  padding-bottom: 21px;
+}
+
+.cities-item:nth-child(2) {
   background-color: #ffffff;
+}
+
+.advantages-others-item:nth-child(2) {
+  background-color: rgba(131, 179, 211, 0.2);
 }
 
 .cities-item::after {
@@ -596,29 +643,33 @@ a {
   color: #000000;
   background-color: #FFFFFF;
   text-align: center;
-  margin: 91px 0;
+  margin-top: 89px;
+  margin-bottom: 93px;
 }
 
 .search-hotels-title {
+  display: block;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
   margin-top: 0;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 
 .search-hotels-description {
-  font-size: 18px;
-  line-height: 21px;
-  margin-bottom: 73px;
+  font-size: 22px;
+  line-height: 26px;
+  margin: 0;
+  margin-bottom: 59px;
+
 }
 
 .button-hotels {
   font-size: 20px;
   line-height: 36px;
   min-width: 575px;
-  padding-top: 13px;
-  padding-bottom: 17px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   border-radius: 10px;
  }
 
@@ -662,7 +713,8 @@ a {
   text-align: center;
   text-decoration: none;
   margin: 0;
-  padding: 94px 0;
+  padding-top: 92px;
+  padding-bottom: 95px;
 }
 
 .subscribe-title {
@@ -670,17 +722,15 @@ a {
   line-height: 36px;
   text-transform: uppercase;
   margin: 0;
-  padding-bottom: 15px;
+  margin-bottom: 30px;
 
 }
 
-.subscribe-description, .button-subscribe {
-  font-size: 20px;
+.subscribe-description {
+  font-size: 22px;
   line-height: 26px;
   margin: 0;
-  padding-bottom: 26px;
-
-
+  margin-bottom: 47px;
 }
 
 .subscribe-form {
@@ -691,7 +741,7 @@ a {
 
 .subscribe-field {
   margin: 0;
-  padding: 0 20px;
+  padding-left: 21px;
   font-size: 18px;
   line-height: 26px;
   font-weight: 400;
@@ -722,6 +772,9 @@ a {
 
 .button-subscribe {
   background-color: #83B3D3;
+  font-size: 20px;
+  line-height: 26px;
+  margin: 0;
   color: #FFFFFF;
   min-width: 200px;
   font-weight: 700;
@@ -744,7 +797,7 @@ a {
 }
 
 .footer-contacts {
-  width: 1056px;
+  width: 1200px;
   color: #000000;
   background-color: #FFFFFF;
   margin: 0 auto;
@@ -752,19 +805,23 @@ a {
 
 .footer-contacts-container {
   display: flex;
-  justify-content: space-between;
-  margin-top: 40px;
+  margin-top: 23px;
+  margin-left: 60px;
   margin-bottom: 30px;
+}
+
+.footer-contacts-catalog {
+  margin-top: 157px;
 }
 
 .social-list {
   display: flex;
   align-items: center;
-  width: 107px;
+  width: 130px;
   margin: 0;
   padding: 0;
   list-style-type: none;
-  gap: 30px;
+  margin-right: 230px;
 }
 
 .button-social {
@@ -773,22 +830,33 @@ a {
   background-position: center;
 
 }
+.button-tw {
+  padding: 12.5px 11px;
+}
+
+.button-fb {
+  padding: 11px 17px;
+}
+
+.button-yt {
+  padding: 11px 12.5px;
+}
 
 .social-img {
   fill: #83B3D3;
 }
 
-.social-img:hover {
+.button-social:hover {
   fill: #68A2CA;
 }
 
-.social-img:focus {
+.button-social:focus {
   fill: #68A2CA;
   outline: 3px solid #83B3D3;
   border-radius: 10px;
 }
 
-.social-img:active {
+.button-social:active {
   opacity: 0.3;
 }
 
@@ -796,6 +864,8 @@ a {
   font-size: 40px;
   line-height: 40px;
   color: #000000;
+  padding: 15px;
+  margin-right: 210px;
 }
 
 .contacts-phone:hover {
@@ -814,6 +884,7 @@ a {
 }
 
 .htmlacademy-link-icon {
+  padding: 18px 22px;
   fill: #000000;
 }
 
@@ -844,12 +915,12 @@ a {
   background-size: 100% auto;
   background-repeat: no-repeat;
   text-decoration: none;
-  padding: 0 72px;
+  padding: 35px 71px 0 72px;
 }
 
 .catalog-title {
   font-size: 60px;
-  line-height: 78px;
+  line-height: 70px;
   font-weight: 700;
   margin: 0;
   margin-right: auto;
@@ -858,8 +929,8 @@ a {
 
 .breadcrumbs {
   display: flex;
-  margin-top: 5px;
-  margin-bottom: 45px;
+  margin: 0;
+  margin-bottom: 42px;
   padding: 0;
   list-style-type: none;
 }
@@ -872,12 +943,20 @@ a {
 .link-index {
   display: block;
   position: relative;
+  box-sizing: border-box;
   width: 12px;
   height: 12px;
-  margin-right: 26px;
+  margin-left: 2px;
+  margin-right: 15px;
   background-image: url("../img/home.svg");
+  background-repeat: no-repeat;
+  padding: 6px 8px 9px 8px;
+
 }
 
+.link-hotels {
+  padding: 2px 8px;
+}
 
 .link-index::after {
   content: "";
@@ -959,7 +1038,7 @@ a {
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
-  margin-bottom: 30px;
+  margin-bottom: 29px;
 }
 
 
@@ -973,7 +1052,7 @@ a {
 .control {
   display: flex;
   position: relative;
-  padding-left: 36px;
+  padding-left: 40px;
 }
 
 .catalog-filter-item:not(:last-child) {
@@ -1065,7 +1144,8 @@ a {
 
  .catalog-filter-wrapper {
   display: flex;
-
+  margin-top: 4px;
+  margin-left: 2px;
   border-radius: 4px;
 
 }
@@ -1075,10 +1155,17 @@ a {
   box-sizing: border-box;
   width: 144px;
   border:2px solid #FFFFFF;
+
 }
 
 .catalog-filter-label:nth-child(1) {
+  border-radius: 4px 0 0 4px;
   border-right: none;
+}
+
+.catalog-filter-label:nth-child(2) {
+  border-radius: 0 4px 4px 0;
+
 }
 
 .catalog-filter-label:hover{
@@ -1124,7 +1211,7 @@ a {
 .range {
   position: relative;
   height: 4px;
-  margin-top: 32px;
+  margin-top: 28px;
   background-color: rgba(255, 255, 255, 0.3);
 
 }
@@ -1158,7 +1245,7 @@ a {
 
 .toggle-min {
   top: -8px;
-  left: -10px;
+  left: 0px;
 }
 
 .toggle-max {
@@ -1204,6 +1291,8 @@ a {
 .button-reset {
   background-color: transparent;
   margin-top: 20px;
+  margin-left: 3px;
+  text-transform: none;
   font-size: 18px;
   line-height: 23px;
   font-weight: 400;
@@ -1221,20 +1310,21 @@ a {
   display: flex;
   width: 1056px;
   margin: 0 auto;
-  padding-top: 50px;
-  padding-bottom: 45px
+  padding-top: 43px;
+  padding-bottom: 40px
 
 }
 
 .sorting {
-  margin-right: 81px;
+  margin-right: 75px;
 }
 
 .sorting-result {
   font-size: 30px;
   line-height: 39px;
   font-weight: 700;
-  margin-right: 191px;
+  margin-right: 187px;
+  text-transform: uppercase;
 
 }
 
@@ -1242,8 +1332,10 @@ a {
   font-size: 18px;
   line-height: 23px;
   width: 287px;
-  padding: 12px;
+  padding: 10px;
+  padding-left: 14px;
   border: 2px solid #E6E6E6;
+  font-family: "PT Sans", sans-serif;
 
 
 }
@@ -1275,11 +1367,11 @@ a {
 }
 
 .button-list {
-  background-image: url("../img/list.svg");
+  background-image: url("../img/cards.svg");
 }
 
 .sorting-wrap .button-cards {
-  background-image: url("../img/cards.svg");
+  background-image: url("../img/list.svg");
   border: 2px solid #000000;
 }
 
@@ -1311,15 +1403,18 @@ a {
 
 .hotel {
   display: flex;
-  margin-top: 28px;
-  margin-bottom: 30px;
+  padding-top: 28px;
+  padding-bottom: 30px;
+  border-top: 1px solid #E6E6E6;
+}
 
-
+.hotel:last-of-type {
+  border-bottom: 1px solid #E6E6E6;
 }
 
 .hotel-img {
   width: 180px;
-  margin-right: 36px;
+  margin-right: 38px;
 }
 
 .hotel-img:hover {
@@ -1335,6 +1430,9 @@ a {
   opacity: 0.3;
 }
 
+.hotel-description {
+
+}
 
 .hotel-title {
   font-size: 24px;
@@ -1374,7 +1472,7 @@ a {
 
 .button-detailed {
   display: inline-block;
-  margin: 0;
+  margin-right: 2px;
   padding: 8px 0;
   width: 151px;
 }
@@ -1428,20 +1526,35 @@ a {
   width: 91px;
   height: 17px;
   margin: 0 auto;
+  margin-top: 6px;
+  background-repeat: space;
   background-color: #FFFFFF;
   background-image: url("../img/star.svg");
   background-position: center;
 }
 
+.star-four {
+  width: 87px;
+}
 
+.star-three {
+  width: 68px;
+}
+
+.star-two {
+  width: 43px;
+}
 
 .hotel-rating {
   display: block;
   width: 160px;
-  height: 37px;
+  font-size: 16px;
   margin: 0;
-  padding: 0;
-  text-align: center;   /*По вертикали по центру не сделать*/
+  padding: 8px 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "PT Sans", sans-serif;
+  background-color: #F2F2F2;
 }
 
 .button-favourites-current {
@@ -1477,8 +1590,10 @@ a {
 
 .pagination-wrap {
   display: flex;
+  width: 1058px;
+  margin: 0 auto;
   margin-top: 31px;
-  margin-bottom: 89px;
+  margin-bottom: 87px;
 
 }
 
@@ -1487,8 +1602,9 @@ a {
   color: #000000;
   background-color: #FFFFFF;
   list-style-type: none;
+  padding: 0;
   margin: 0;
-  margin-right: 351px;
+  margin-right: 302px;
 }
 
 .pagination-link {
@@ -1525,7 +1641,7 @@ a {
 
 
 .pagination-item:not(:last-child) {
-  margin-right: 7px;
+  margin-right: 8px;
 }
 
 .pagination-current {
@@ -1536,6 +1652,7 @@ a {
 .hotelsonpage {
   display: flex;
   width: 386px;
+  padding-top: 4px;
 
 
 
@@ -1558,6 +1675,7 @@ a {
   border: 2px solid #E6E6E6;
   box-sizing: border-box;
   border-radius: 4px;
+
 }
 
 .modal-container {
@@ -1568,13 +1686,14 @@ a {
   width: 100%;
   height: 100%;
   background-color: rgba(242, 242, 242, 0.8);
+  z-index: 2;
 }
 
 .modal {
   position: relative;
   margin: auto;
   box-sizing: border-box;
-  padding: 62px 70px 70px 70px;
+  padding: 63px 67px 66px 72px;
   background-color: #FFFFFF;
   border-radius: 30px;
   width: 715px;
@@ -1586,12 +1705,14 @@ a {
 
 .modal-title {
   margin: 0;
-  font-family: "PT Sans Narrow", sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-size: 30px;
   line-height: 40px;
   font-weight: 700;
   color: #000000;
   text-transform: uppercase;
+  margin-bottom: 60px;
+
 
 }
 
@@ -1626,9 +1747,6 @@ a {
 }
 
 
-.modal-form {
-  margin-top: 54px;
-}
 
 .field-group {
   display: flex;
@@ -1651,6 +1769,7 @@ a {
 
 .field-input {
   width: 420px;
+  font-family: "PT Sans", sans-serif;
   background-color: #F2F2F2;
   color: #000000;
   border: none;
@@ -1699,9 +1818,8 @@ a {
   line-height: 40px;
 }
 
-.field-description:last-of-type {
+.field-description:first-of-type {  /*что-то не работает!!*/
   color: #FF5757;
-
 }
 
 .field-group-adults, .field-group-children {
@@ -1715,6 +1833,7 @@ a {
 .field-group-adults {
   margin-right: 56px;
 }
+
 
 .field-adults, .field-children {
 
@@ -1738,8 +1857,8 @@ a {
   display: block;
   width: 25px;
   height: 25px;
-  margin-top: 14px;
-  margin-left: 7px;
+  margin-top: 13px;
+  margin-left: 10px;
   padding: 0;
   border: none;
   background-image: url("../img/info.svg");
@@ -1747,16 +1866,18 @@ a {
   background-position: center;
 }
 
+
 .field-number {
   display: block;
-  width: 133px;
+  width: 37px;
   font-size: 18px;
   line-height: 50px;
   font-weight: 700;
+  padding: 0;
   margin: 0 auto;
   text-align: center;
   background-color: #F2F2F2;
-  border-radius: 4px;
+  border: none;
 }
 
 .button-form-search {
@@ -1783,48 +1904,44 @@ a {
   color: rgba(255, 255, 255, 0.3);
 }
 
+.field-number-people::-moz-placeholder {
+  color: #000000;
+}
+
+.field-number::-webkit-input-placeholder {
+  color: #000000;
+}
 
 .minus, .plus {
   margin: 0;
+  width: 48px;
+  height: 50px;
+  background-color: #F2F2F2;
 }
 
-.minus::after {
-  position: absolute;
+.minus-svg {
+  fill: #000000;
+  opacity: 0.3;
+  padding: 12px 6px;
+}
 
-  /*top: 7px;
-  left: 170px;  /*!!!!!!!! Почему не работает!!!!!!!!!!!*/
-  margin-left: 10px;
-  margin-top: 24px;
-  width: 13px;
-  height: 1px;
-  background-color: rgba(0, 0, 0, 0.3);
-  content: "";
+.plus-svg {
+  fill: #000000;
+  opacity: 0.3;
+  padding: 6px;
 }
 
 
-.plus::before, .plus::after {
-  display: block;
-  position: absolute;
-
-  /*margin-right: -10px;*/  /*!! Не работает!!!!*/
-  margin-left: -23px;
-  margin-top: 24px;
-  width: 13px;
-  height: 1px;
-  background-color: rgba(0, 0, 0, 0.3);
-  content: "";
-  cursor: pointer;
+.plus-svg:hover, .minus-svg:hover {
+  opacity: 1;
 }
 
-.plus::after {
-  transform: rotate(90deg);
-}
-
-.minus:hover::after, .plus:hover::before, .plus:hover::after {
-  background-color: #000000;
-}
-
-.minus:focus::after, .plus:focus::before, .plus:focus::after {
-  background-color: #000000;
+.plus-svg:focus, .minus-svg:focus {
+  opacity: 1;
   outline: 3px solid #83B3D3;
 }
+
+.plus-svg:active, .minus-svg:active {
+  opacity: 0.2;
+}
+
