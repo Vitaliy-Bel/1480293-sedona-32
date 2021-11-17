@@ -27,7 +27,7 @@ body {
   font-size: 18px;
   line-height: 21px;
   color: #333333;
-  background-color: #FFFFFF;
+  background-color: #F2F2F2;
   margin: 0;
 }
 
@@ -181,7 +181,7 @@ a {
   fill: #756257;
 }
 
-.navigation-link:focus {  /*  ФИГНЯ!!  */
+.navigation-link:focus {
 
   outline: 3px solid #83B3D3;
   border-radius: 10px;
@@ -212,7 +212,6 @@ a {
 .navigation-favourites::after {
   position: absolute;
   content:  '12';
-  /*display: block;*/
   width: 19px;
   height: 19px;
   top: 0px;
@@ -419,10 +418,17 @@ a {
   color: rgba(255, 255, 255, 0.3);
 }
 
+.body-wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
 .main-container {
   display: flex;
-  flex-grow: 1; /* не понимаю зачем так и так работает*/
-  margin-top: -5px; /*только прозрачность надо наверное? */
+  flex-grow: 1;
+  margin-top: -5px;
 }
 
 .main-index {
@@ -461,7 +467,7 @@ a {
 
 }
 
-.index-logo::after {    /*не понятно) почему относительно index-img не работает*/
+.index-logo::after {
   content: '';
   position: absolute;
   top: 428px;
@@ -478,7 +484,7 @@ a {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
-  font-weight: 700;  /*  Почему не работает? Потому что апперкейс есть? */
+  font-weight: 700;
   padding: 3px 0;
   margin-bottom: 29px;
 }
@@ -570,7 +576,7 @@ a {
 
 .cities-item {
   position: relative;
-  width: 400px; /* Почему работает только с этим?*/
+  width: 400px;
   margin: 0;
   padding-top: 184px;
   padding-bottom: 89px;
@@ -986,7 +992,7 @@ a {
   opacity: 0.6;
 }
 
-.breadcrumbs-link:focus {   /*Не понятно!!!*/
+.breadcrumbs-link:focus {
   outline: 3px solid #83B3D3;
   border-radius: 4px;
 }
@@ -1024,15 +1030,15 @@ a {
 
 .filter-group-type {
   width: 144px;
-  margin: 0;      /*почему не работает без этого, хотя все отступы и размеры остальных 3- блоков выставил?*/
-  margin-right: 167px; /*Если это указываешь то апартаменты не влезают в одну строку*/
+  margin: 0;
+  margin-right: 167px;
 
 }
 
 .catalog-filter-group {
   margin: 0;
   padding: 0;
-  border: 0; /* Все равно ширина 154. Почему?*/
+  border: 0;
 
 }
 
@@ -1188,7 +1194,7 @@ a {
 
 .catalog-filter-input {
   box-sizing: border-box;
-  width: 112px;  /*почему без этого не работает?*/
+  width: 112px;
   margin: 0;
   padding: 13px 14px;
   font-size: 18px;
@@ -1450,9 +1456,7 @@ a {
   opacity: 0.3;
 }
 
-.hotel-description {
 
-}
 
 .hotel-title {
   font-size: 24px;
@@ -1610,7 +1614,7 @@ a {
   color: #FFFFFF;
   margin: 0 auto;
   margin-top: 31px;
-  margin-bottom: 30px;  /*Что-то ту не то)))*/
+  margin-bottom: 30px;
 }
 
 .pagination-wrap {
@@ -1768,7 +1772,7 @@ a {
 
 .modal-close-button:active {
   background-color: #E6E6E6;
-  opacity: 0.3;  /*как сделать как в фигме? Прозрачен должен быть только крестик */
+  opacity: 0.3;
 }
 
 
@@ -1843,7 +1847,7 @@ a {
   line-height: 40px;
 }
 
-.field-description-red  {  /*что-то не работает!!*/
+.field-description-red  {
   color: #FF5757;
 }
 
