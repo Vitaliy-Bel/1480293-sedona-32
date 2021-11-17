@@ -480,7 +480,7 @@ a {
   text-transform: uppercase;
   font-weight: 700;  /*  Почему не работает? Потому что апперкейс есть? */
   padding: 3px 0;
-  margin-bottom: 33px;
+  margin-bottom: 29px;
 }
 
 .logo-description {
@@ -525,7 +525,7 @@ a {
 .advantages-others-item {
   background-color: rgba(131, 179, 211, 0.12);
   color: #000000;
-  padding-bottom: 110px;
+  padding-bottom: 108px;
 }
 
 .advantages-title, .cities-title {
@@ -547,7 +547,7 @@ a {
 }
 
 .advantages-number {
-  padding-bottom: 32px;
+  padding-bottom: 30px;
 }
 
 
@@ -572,8 +572,8 @@ a {
   position: relative;
   width: 400px; /* Почему работает только с этим?*/
   margin: 0;
-  padding-top: 185px;
-  padding-bottom: 90px;
+  padding-top: 184px;
+  padding-bottom: 89px;
   background-color: rgba(131, 179, 211, 0.12);
   color: #000000;
 }
@@ -644,7 +644,7 @@ a {
   background-color: #FFFFFF;
   text-align: center;
   margin-top: 89px;
-  margin-bottom: 93px;
+  margin-bottom: 90px;
 }
 
 .search-hotels-title {
@@ -811,7 +811,7 @@ a {
 }
 
 .footer-contacts-catalog {
-  margin-top: 157px;
+  margin-top: 162px;
 }
 
 .social-list {
@@ -946,9 +946,10 @@ a {
   box-sizing: border-box;
   width: 12px;
   height: 12px;
-  margin-left: 2px;
+  margin-top: -1px;
   margin-right: 15px;
   background-image: url("../img/home.svg");
+  background-position: center;
   background-repeat: no-repeat;
   padding: 6px 8px 9px 8px;
 
@@ -956,13 +957,13 @@ a {
 
 .link-hotels {
   padding: 2px 8px;
+  cursor: pointer;
 }
 
 .link-index::after {
   content: "";
   position: absolute;
-  right: 0px;
-  bottom: 0px;
+  top: 4px;
   left: 23px;
   height: 8px;
   width: 5px;
@@ -971,6 +972,7 @@ a {
   color: #FFFFFF;
 
 }
+
 
 
 
@@ -986,7 +988,7 @@ a {
 
 .breadcrumbs-link:focus {   /*Не понятно!!!*/
   outline: 3px solid #83B3D3;
-  border-radius: 10px;
+  border-radius: 4px;
 }
 
 .breadcrumbs-link:active {
@@ -1038,7 +1040,8 @@ a {
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
-  margin-bottom: 29px;
+  padding: 0;
+  margin-bottom: 30px;
 }
 
 
@@ -1056,7 +1059,7 @@ a {
 }
 
 .catalog-filter-item:not(:last-child) {
-  margin-bottom: 13px;
+  margin-bottom: 12px;
 }
 
 .control-input {
@@ -1118,6 +1121,7 @@ a {
   height: 20px;
   background-color: #FFFFFF;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .control-input[type="radio"]:checked + .control-circle::after {
@@ -1145,7 +1149,6 @@ a {
  .catalog-filter-wrapper {
   display: flex;
   margin-top: 4px;
-  margin-left: 2px;
   border-radius: 4px;
 
 }
@@ -1155,6 +1158,7 @@ a {
   box-sizing: border-box;
   width: 144px;
   border:2px solid #FFFFFF;
+  cursor: pointer;
 
 }
 
@@ -1175,6 +1179,7 @@ a {
 
 .catalog-filter-label:focus {
   outline: 3px solid #83B3D3;
+  box-shadow: 0px 0px 0px 3px #81B3D2;
 }
 
 .catalog-filter-label:active {
@@ -1185,9 +1190,9 @@ a {
   box-sizing: border-box;
   width: 112px;  /*почему без этого не работает?*/
   margin: 0;
-  padding: 12px 14px;
+  padding: 13px 14px;
   font-size: 18px;
-  line-height: 23px;
+  line-height: 20px;
   font-weight: 400;
   border: none;
   background-color: transparent;
@@ -1202,6 +1207,7 @@ a {
 
  .catalog-filter-span {
   padding: 12px 0;
+  margin-left: -3px;
   color: rgba(255, 255, 255, 0.3);
  }
 
@@ -1290,7 +1296,7 @@ a {
 
 .button-reset {
   background-color: transparent;
-  margin-top: 20px;
+  margin-top: 18px;
   margin-left: 3px;
   text-transform: none;
   font-size: 18px;
@@ -1298,6 +1304,18 @@ a {
   font-weight: 400;
   border: 0;
   color: #ffffff;
+}
+
+.button-reset:hover {
+  opacity: 0.6;
+}
+
+.button-reset:focus {
+  outline: 3px solid #83B3D3;
+}
+
+.button-reset:hover {
+  opacity: 0.3;
 }
 
 .sorting-wrap, .hotels-wrap {
@@ -1311,19 +1329,20 @@ a {
   width: 1056px;
   margin: 0 auto;
   padding-top: 43px;
-  padding-bottom: 40px
+  padding-bottom: 41px
 
 }
 
 .sorting {
-  margin-right: 75px;
+  display: flex;
 }
 
 .sorting-result {
   font-size: 30px;
   line-height: 39px;
   font-weight: 700;
-  margin-right: 187px;
+  margin-right: 191px;
+  margin-top: 6px;
   text-transform: uppercase;
 
 }
@@ -1403,8 +1422,8 @@ a {
 
 .hotel {
   display: flex;
-  padding-top: 28px;
-  padding-bottom: 30px;
+  padding-top: 17px;
+  padding-bottom: 28px;
   border-top: 1px solid #E6E6E6;
 }
 
@@ -1414,7 +1433,8 @@ a {
 
 .hotel-img {
   width: 180px;
-  margin-right: 38px;
+  margin-right: 23px;
+  margin-top: 14px;
 }
 
 .hotel-img:hover {
@@ -1438,7 +1458,9 @@ a {
   font-size: 24px;
   line-height: 31px;
   font-weight: 700;
+  padding: 10px 15px;
   margin: 0;
+  cursor: pointer;
 }
 
 .hotel-title:hover {
@@ -1460,7 +1482,9 @@ a {
   display: flex;
   width: 235px;
   justify-content: space-between;
-  margin-bottom: 31px;
+  margin-top: -9px;
+  margin-bottom: 32px;
+  margin-left: 15px;
 }
 
 
@@ -1472,6 +1496,7 @@ a {
 
 .button-detailed {
   display: inline-block;
+  margin-left: 15px;
   margin-right: 2px;
   padding: 8px 0;
   width: 151px;
@@ -1526,7 +1551,7 @@ a {
   width: 91px;
   height: 17px;
   margin: 0 auto;
-  margin-top: 6px;
+  margin-top: 17px;
   background-repeat: space;
   background-color: #FFFFFF;
   background-image: url("../img/star.svg");
@@ -1671,7 +1696,7 @@ a {
   font-size: 18px;
   line-height: 23px;
   font-weight: 400;
-  padding-left: 17px;
+  padding-left: 12px;
   border: 2px solid #E6E6E6;
   box-sizing: border-box;
   border-radius: 4px;
@@ -1719,8 +1744,8 @@ a {
 .modal-close-button {
   position: absolute;
   padding: 0;
-  top: 54px;
-  right: 70px;
+  top: 55px;
+  right: 67px;
   width: 53px;
   height: 53px;
   background-color: #F2F2F2;
@@ -1818,7 +1843,7 @@ a {
   line-height: 40px;
 }
 
-.field-description:first-of-type {  /*что-то не работает!!*/
+.field-description-red  {  /*что-то не работает!!*/
   color: #FF5757;
 }
 
@@ -1855,10 +1880,11 @@ a {
 .field-children::after {
   content: '';
   display: block;
+  position: absolute;
   width: 25px;
   height: 25px;
-  margin-top: 13px;
-  margin-left: 10px;
+  top: 15px;
+  left: 55px;
   padding: 0;
   border: none;
   background-image: url("../img/info.svg");
@@ -1866,6 +1892,26 @@ a {
   background-position: center;
 }
 
+.field-children:hover::after {
+  content: 'Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.';
+  display: block;
+  position: absolute;
+  width: 216px;
+  height: 110px;
+  top: 13px;
+  left: 10px;
+  padding: 15px 18px 18px 22px;
+  border: none;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  font-family: "PT Sans", sans-serif;
+  color: #FFFFFF;
+  background-color: #333333;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
 .field-number {
   display: block;
