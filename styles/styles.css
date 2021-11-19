@@ -191,7 +191,6 @@ body {
 .navigation-favourites {
   position: relative;
   margin-right: 23px;
-
 }
 
 .navigation-icon {
@@ -202,7 +201,6 @@ body {
   left: 0;
   margin: auto;
   fill: #000000;
-
 }
 
 .navigation-favourites::after {
@@ -217,7 +215,7 @@ body {
   font-size: 10px;
   color: #ffffff;
   text-align: center;
-  }
+}
 
 .navigation-button {
   min-width: 160px;
@@ -254,7 +252,6 @@ body {
   min-height: 230px;
   box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
-
 }
 
 .popover-close {
@@ -270,8 +267,6 @@ body {
   left: 188px;
   background-image: url("../img/triangle.svg");
   background-color: #FFFFFF;
-
-
 }
 
 
@@ -290,7 +285,6 @@ body {
   margin-left: 13px;
   column-gap: 84px;
   box-sizing: border-box;
-
 }
 
 
@@ -353,7 +347,6 @@ body {
   line-height: 21px;
   font-weight: 700;
   color: #000000;
-
 }
 
 .cart-item-type {
@@ -506,7 +499,6 @@ body {
   padding: 0;
   margin: 0;
   list-style-type: none;
-
 }
 
 .advantages-one, .advantages-others-item {
@@ -515,7 +507,6 @@ body {
   margin: 0;
   flex-direction: column;
   width: 400px;
-
 }
 
 .advantages-one {
@@ -662,7 +653,6 @@ body {
   line-height: 26px;
   margin: 0;
   margin-bottom: 59px;
-
 }
 
 .button-hotels {
@@ -723,7 +713,6 @@ body {
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 30px;
-
 }
 
 .subscribe-description {
@@ -750,7 +739,7 @@ body {
   width: 600px;
   border-radius: 10px 0 0 10px;
   background-color: #F2F2F2;
- }
+}
 
 .subscribe-field:hover {
   background-color: #E6E6E6;
@@ -887,7 +876,6 @@ body {
 .htmlacademy-link-icon {
   padding: 18px 22px;
   fill: #000000;
-
 }
 
 .htmlacademy-link-icon:hover {
@@ -955,7 +943,6 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   padding: 6px 8px 9px 8px;
-
 }
 
 .link-hotels {
@@ -973,7 +960,6 @@ body {
   background-image: url("../img/arrow.svg");
   background-repeat: no-repeat;
   color: #FFFFFF;
-
 }
 
 
@@ -1008,7 +994,7 @@ body {
   display: flex;
   margin: 0;
   padding: 0;
-  }
+}
 
 
 
@@ -1029,7 +1015,6 @@ body {
   width: 144px;
   margin: 0;
   margin-right: 167px;
-
 }
 
 .catalog-filter-group {
@@ -1094,7 +1079,6 @@ body {
   background-image: url("../img/check.svg");
   width: 10px;
   height: 12px;
-
 }
 
 .control-input[type="checkbox"]:focus + .control-square {
@@ -1231,7 +1215,6 @@ body {
   height: 4px;
   margin-top: 28px;
   background-color: rgba(255, 255, 255, 0.3);
-
 }
 
 .range-wrapper {
@@ -1239,7 +1222,6 @@ body {
   height: 4px;
   width: 227px;
   background-color: #FFFFFF;
-
 }
 
 .range-toggle {
@@ -1342,7 +1324,6 @@ body {
   margin: 0 auto;
   padding-top: 43px;
   padding-bottom: 41px
-
 }
 
 .sorting {
@@ -1356,7 +1337,6 @@ body {
   margin-right: 191px;
   margin-top: 6px;
   text-transform: uppercase;
-
 }
 
 .select-control {
@@ -1367,8 +1347,6 @@ body {
   padding-left: 14px;
   border: 2px solid #E6E6E6;
   font-family: "PT Sans", sans-serif;
-
-
 }
 
 
@@ -1421,7 +1399,6 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-
 }
 
 .hotels {
@@ -1638,7 +1615,6 @@ body {
   margin: 0 auto;
   margin-top: 31px;
   margin-bottom: 87px;
-
 }
 
 .pagination {
@@ -1697,16 +1673,12 @@ body {
   display: flex;
   width: 386px;
   padding-top: 4px;
-
-
-
 }
 
 .hotelsonpage-result {
   padding: 12px 0;
   line-height: 23px;
   margin-right: 51px;
-
 }
 
 .hotelsonpage-control {
@@ -1720,7 +1692,6 @@ body {
   box-sizing: border-box;
   border-radius: 4px;
   cursor: pointer;
-
 }
 
 .modal-container {
@@ -1745,7 +1716,7 @@ body {
 }
 
 .modal-container-close {
-  /*display: none;*/
+  display: none;
 }
 
 
@@ -1759,8 +1730,6 @@ body {
   color: #000000;
   text-transform: uppercase;
   margin-bottom: 60px;
-
-
 }
 
 .modal-close-button {
@@ -1794,7 +1763,6 @@ body {
 }
 
 
-
 .field-group {
   display: flex;
   width: 575px;
@@ -1811,7 +1779,6 @@ body {
   font-size: 18px;
   line-height: 50px;
   font-weight: 700;
-
 }
 
 .field-input {
@@ -1839,7 +1806,7 @@ body {
 .field-input::-webkit-input-placeholder {
   color: #000000;
   padding-left: 19px;
- }
+}
 
 .field-input::-moz-placeholder {
   color: #000000;
@@ -1874,8 +1841,6 @@ body {
   display: flex;
   position: relative;
 }
-
-
 
 
 .field-group-adults {
@@ -1945,8 +1910,6 @@ body {
   top: 29px;
   left: 1px;
   background-image: url("../img/triangle-modal.svg");
-
-
 }
 
 
