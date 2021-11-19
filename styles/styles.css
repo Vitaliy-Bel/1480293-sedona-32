@@ -111,7 +111,7 @@ body {
 
 .page-current::after {
   position: absolute;
-  bottom: -20px;
+  bottom: -18px;
   left: 12px;
   height: 2px;
   background-color: #756257;
@@ -450,6 +450,7 @@ body {
 .index-img {
   display: block;
   margin-bottom: 58px;
+  background-color: #FFFFFF;
 }
 
 .index-logo::before {
@@ -460,7 +461,6 @@ body {
   height: 352px;
   width: 458px;
   background-image: url("../img/welcome.svg");
-
 }
 
 .index-logo::after {
@@ -481,8 +481,8 @@ body {
   line-height: 36px;
   text-transform: uppercase;
   font-weight: 700;
-  padding: 3px 0;
-  margin-bottom: 29px;
+  margin: 3px 240px 31px;
+  padding: 0;
 }
 
 .logo-description {
@@ -490,8 +490,8 @@ body {
   font-size: 22px;
   line-height: 36px;
   font-weight: 400;
-  margin: 0;
-  margin-bottom: 79px;
+  margin: 0 240px 80px;
+  padding: 0;
 }
 
 /*Преимущества*/
@@ -573,9 +573,9 @@ body {
 .cities-item {
   position: relative;
   width: 400px;
+  box-sizing: border-box;
   margin: 0;
-  padding-top: 184px;
-  padding-bottom: 89px;
+  padding: 184px 75px 89px;
   background-color: rgba(131, 179, 211, 0.12);
   color: #000000;
 }
@@ -645,8 +645,7 @@ body {
   color: #000000;
   background-color: #FFFFFF;
   text-align: center;
-  margin-top: 89px;
-  margin-bottom: 90px;
+  padding: 89px 240px 90px;
 }
 
 .search-hotels-title {
@@ -703,7 +702,7 @@ body {
   color: #000000;
   background-color: #FFFFFF;
   text-align: center;
-
+  padding: 0 200px 0;
 }
 
 .subscribe-index {
@@ -715,8 +714,7 @@ body {
   text-align: center;
   text-decoration: none;
   margin: 0;
-  padding-top: 92px;
-  padding-bottom: 95px;
+  padding: 92px 200px 95px;
 }
 
 .subscribe-title {
@@ -889,6 +887,7 @@ body {
 .htmlacademy-link-icon {
   padding: 18px 22px;
   fill: #000000;
+
 }
 
 .htmlacademy-link-icon:hover {
@@ -915,6 +914,7 @@ body {
   margin: 0 auto;
   background-color: #000000;
   background-image: url("../img/catalog-background.png");
+  background-color: #615048;
   background-size: 100% auto;
   background-repeat: no-repeat;
   text-decoration: none;
@@ -1097,14 +1097,16 @@ body {
 
 }
 
+.control-input[type="checkbox"]:focus + .control-square {
+  background-color: rgba(255, 255, 255, 0.6);
+  outline: 3px solid #83B3D3;
+}
+
+
 .control-square:hover {
   background-color: rgba(255, 255, 255, 0.6);
 }
 
-.control-square:focus {
-  background-color: rgba(255, 255, 255, 0.6);
-  outline: 3px solid #83B3D3;
-}
 
 .control-square:active {
   background-color: rgba(255, 255, 255, 0.3);
@@ -1144,10 +1146,10 @@ body {
   padding: 0;
 }
 
-.control-circle:focus {
+.control-input[type="radio"]:focus + .control-circle {
+  background-color: rgba(255, 255, 255, 0.6);
   outline: 3px solid #83B3D3;
 }
-
 
  .catalog-filter-wrapper {
   display: flex;
@@ -1156,65 +1158,72 @@ body {
 
 }
 
-.catalog-filter-label {
+.catalog-filter-pack {
   display: flex;
   box-sizing: border-box;
-  width: 144px;
-  border:2px solid #FFFFFF;
   cursor: pointer;
-
 }
 
-.catalog-filter-label:nth-child(1) {
-  border-radius: 4px 0 0 4px;
-  border-right: none;
+.catalog-filter-pack {
+  position: relative;
 }
 
-.catalog-filter-label:nth-child(2) {
-  border-radius: 0 4px 4px 0;
-
-}
-
-.catalog-filter-label:hover{
-  border:2px solid rgba(255, 255, 255, 0.6);
-
-}
-
-.catalog-filter-label:focus {
-  outline: 3px solid #83B3D3;
-  box-shadow: 0px 0px 0px 3px #81B3D2;
-}
-
-.catalog-filter-label:active {
-  background-color: #756257;
-}
 
 .catalog-filter-input {
   box-sizing: border-box;
-  width: 112px;
+  width: 144px;
   margin: 0;
-  padding: 13px 14px;
+  padding: 13px 36px 13px 14px;
   font-size: 18px;
   line-height: 20px;
   font-weight: 400;
   border: none;
   background-color: transparent;
-
+  box-sizing: border-box;
+  width: 144px;
+  border:2px solid #FFFFFF;
+  cursor: pointer;
 }
+
+.catalog-filter-pack:nth-child(1) .catalog-filter-input  {
+  border-radius: 4px 0 0 4px;
+  border-right: none;
+}
+
+.catalog-filter-pack:nth-child(2) .catalog-filter-input {
+  border-radius: 0 4px 4px 0;
+}
+
+.catalog-filter-input::-moz-placeholder {
+  color: #FFFFFF;
+}
+
 .catalog-filter-input::-webkit-input-placeholder {
   color: #FFFFFF;
- }
- .catalog-filter-input::-moz-placeholder {
+}
+
+.catalog-filter-input:focus {
+  outline: 3px solid #83B3D3;
+  box-shadow: 0px 0px 0px 3px #81B3D2;
+}
+
+.catalog-filter-input:hover{
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.catalog-filter-input:active {
+  background-color: #756257;
+}
+
+.catalog-filter-label {
+  position: absolute;
+  top: 14px;
+  left: 110px;
+  font-size: 18px;
+  line-height: 23x;
   color: #FFFFFF;
- }
-
- .catalog-filter-span {
-  padding: 12px 0;
-  margin-left: -3px;
-  color: rgba(255, 255, 255, 0.3);
- }
-
-
+  opacity: 0.3;
+}
 
 
 .range {
@@ -1438,6 +1447,7 @@ body {
   width: 180px;
   margin-right: 23px;
   margin-top: 14px;
+  cursor: pointer;
 }
 
 .hotel-img:hover {
@@ -1559,6 +1569,10 @@ body {
   background-position: center;
 }
 
+.star-five {
+  width: 106px;
+}
+
 .star-four {
   width: 87px;
 }
@@ -1569,6 +1583,10 @@ body {
 
 .star-two {
   width: 43px;
+}
+
+.star-one {
+  width: 18px;
 }
 
 .hotel-rating {
@@ -1701,6 +1719,7 @@ body {
   border: 2px solid #E6E6E6;
   box-sizing: border-box;
   border-radius: 4px;
+  cursor: pointer;
 
 }
 
@@ -1726,8 +1745,10 @@ body {
 }
 
 .modal-container-close {
-  display: none;
+  /*display: none;*/
 }
+
+
 
 .modal-title {
   margin: 0;
@@ -1802,6 +1823,7 @@ body {
   border-radius: 4px;
   font-size: 18px;
   font-weight: 700;
+  padding: 0 53px 0 19px;
 }
 
 .field-input:hover {
@@ -1878,7 +1900,7 @@ body {
   width: 97px;
 }
 
-.field-children::after {
+.info {
   content: '';
   display: block;
   position: absolute;
@@ -1893,15 +1915,16 @@ body {
   background-position: center;
 }
 
-.field-children:hover::after {
+.info:hover::after {
   content: 'Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.';
   display: block;
   position: absolute;
-  width: 216px;
-  height: 110px;
-  top: 13px;
-  left: 10px;
-  padding: 15px 18px 18px 22px;
+  box-sizing: border-box;
+  width: 256px;
+  height: 143px;
+  top: 38px;
+  left: -116px;
+  padding: 20px 18px 18px 22px;
   border: none;
   font-size: 16px;
   line-height: 20px;
@@ -1913,6 +1936,19 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 }
+
+.info:hover::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 9px;
+  top: 29px;
+  left: 1px;
+  background-image: url("../img/triangle-modal.svg");
+
+
+}
+
 
 .field-number {
   display: block;
