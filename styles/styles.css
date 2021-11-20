@@ -316,7 +316,7 @@ body {
 }
 
 .cart-item-desert::before {
-  background-image: url("../img/desert.jpg");
+  background-image: url("../img/steppe.jpg");
 }
 
 .cart-item-desert:hover, .cart-item-villas:hover {
@@ -747,12 +747,12 @@ body {
 
 .subscribe-field:focus {
   background-color: #E6E6E6;
-  border: 3px solid #83B3D3;
+  outline: 3px solid #83B3D3;
 }
 
 .subscribe-field:active {
   background-color: #FFFFFF;
-  border: 2px solid #000000;
+  outline: 2px solid #000000;
 }
 .subscribe-field:disabled {
   background-color: #FFFFFF;
