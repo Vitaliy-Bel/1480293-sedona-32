@@ -255,7 +255,7 @@ body {
 }
 
 .popover-close {
-  /*display: none;*/
+  display: none;
 }
 
 .popover-content::after {
